@@ -1,5 +1,6 @@
 package com.kk.domain.rule.model.entity;
 
+import com.ice.core.context.IcePack;
 import com.ice.core.context.IceRoam;
 import lombok.Builder;
 import lombok.Data;
@@ -13,5 +14,7 @@ import lombok.Data;
 @Data
 @Builder
 public class IceRuleFactorEntity {
+
+    private IcePack pack;
 
 }

@@ -1,1 +1,0 @@
-package com.kk.infrastructure.gateway.adapter;

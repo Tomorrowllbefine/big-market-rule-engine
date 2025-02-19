@@ -4,7 +4,14 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 
 import java.util.Map;
 
+/**
+ * 供外部调用的接口定义
+ *
+ * @author limoukun
+ * @since 2025/2/19
+ **/
 public interface IRuleEngineService {
 
+    // Todo 此处的入参还需要进行优化，建议不传map
     String execute(Map<String, Object> mmap) throws JsonProcessingException;
 }

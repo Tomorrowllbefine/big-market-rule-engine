@@ -25,7 +25,6 @@ import java.util.Map;
 @CrossOrigin("${app.config.cross-origin}")
 @RequestMapping("/api/${app.config.api-version}/rule_engine")
 @RestController
-// Todo Dubbo @limoukun 2025-2-15 16:45:49
 public class RuleEngineController implements IRuleEngineService {
 
     @Resource
@@ -35,7 +34,8 @@ public class RuleEngineController implements IRuleEngineService {
     public String execute(Map<String, Object> mmap) throws JsonProcessingException {
         // 简单实现一版
         IcePack pack = JacksonUtils.readJson(JacksonUtils.toJsonString(mmap), IcePack.class);
-        IceRuleFactorEntity iceRuleFactorEntity = IceRuleFactorEntity.builder().build();
+        IceRuleFactorEntity iceRuleFactorEntity = IceRuleFactorEntity.builder()
+                .pack(pack).build();
         return ruleExecute.execute(iceRuleFactorEntity);
     }
 
