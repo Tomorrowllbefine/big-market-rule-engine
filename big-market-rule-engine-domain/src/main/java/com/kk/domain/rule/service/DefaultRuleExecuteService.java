@@ -7,6 +7,7 @@ import com.ice.core.context.IcePack;
 import com.ice.core.utils.JacksonUtils;
 import com.kk.domain.rule.model.entity.IceRuleFactorEntity;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -17,6 +18,7 @@ import java.util.List;
  * @since 2025/2/15
  **/
 @Slf4j
+@Service
 public class DefaultRuleExecuteService implements IRuleExecute{
 
     @Override

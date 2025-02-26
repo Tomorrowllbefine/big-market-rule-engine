@@ -18,8 +18,6 @@ import java.util.Objects;
 public class BlacklistFlow extends BaseLeafRoamFlow {
     /** 黑名单uid */
     private String key;
-    /** 黑名单默认积分0.1 */
-    private double defaultValue;
     /** 运营配置的黑名单列表 */
     private Integer blacklist;
 
@@ -30,7 +28,6 @@ public class BlacklistFlow extends BaseLeafRoamFlow {
             System.out.println("Raffle责任链 - 黑名单规则 - 判断节点: key为null" );
             return false;
         }
-
         return Objects.equals(userId, blacklist);
     }
 }

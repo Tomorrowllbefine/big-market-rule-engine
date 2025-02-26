@@ -11,7 +11,7 @@ ice:
   app: 2
   #  server: zookeeper:localhost:2181,localhost:2182,localhost:2183
   server: localhost:18121
-  scan: com.ice.test
+  scan: com.kk.domain.rule.model
   pool:
     parallelism: -1
 test:

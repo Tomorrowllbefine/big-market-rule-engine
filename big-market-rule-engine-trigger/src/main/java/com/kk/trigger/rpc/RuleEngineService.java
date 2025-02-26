@@ -21,10 +21,11 @@ public class RuleEngineService implements IRuleEngineService {
 
     @Override
     public String execute(Map<String, Object> mmap) throws JsonProcessingException {
-        // 简单实现一版
+        // 简单实现版
         log.info("rule-engine receive: {}",mmap.toString());
         IcePack pack = JacksonUtils.readJson(JacksonUtils.toJsonString(mmap), IcePack.class);
-        IceRuleFactorEntity iceRuleFactorEntity = IceRuleFactorEntity.builder().build();
+        IceRuleFactorEntity iceRuleFactorEntity = IceRuleFactorEntity.builder()
+                .pack(pack).build();
         return ruleExecute.execute(iceRuleFactorEntity);
     }
 }
